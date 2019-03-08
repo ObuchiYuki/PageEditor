@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		585D9307FD42A7172FD0E2EF /* Pods_PageEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */; };
+		B207A57922323A12006C6BDA /* AEArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57822323A12006C6BDA /* AEArticle.swift */; };
+		B207A57B22323A4E006C6BDA /* AEFetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */; };
+		B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */; };
+		B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */; };
+		B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58222324C57006C6BDA /* AEEditorViewController.swift */; };
+		B207A58522324C78006C6BDA /* AEEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58422324C78006C6BDA /* AEEditorViewModel.swift */; };
 		B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D2A72223237CC0077E6CD /* AppDelegate.swift */; };
 		B28D2A75223237CC0077E6CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D2A74223237CC0077E6CD /* ViewController.swift */; };
 		B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A76223237CC0077E6CD /* Main.storyboard */; };
@@ -15,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B207A57822323A12006C6BDA /* AEArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticle.swift; sourceTree = "<group>"; };
+		B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFetchAPI.swift; sourceTree = "<group>"; };
+		B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewController.swift; sourceTree = "<group>"; };
+		B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewModel.swift; sourceTree = "<group>"; };
+		B207A58222324C57006C6BDA /* AEEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewController.swift; sourceTree = "<group>"; };
+		B207A58422324C78006C6BDA /* AEEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewModel.swift; sourceTree = "<group>"; };
 		B28D2A6F223237CC0077E6CD /* PageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28D2A72223237CC0077E6CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28D2A74223237CC0077E6CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,9 @@
 		B28D2A79223237CC0077E6CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28D2A7C223237CC0077E6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28D2A7E223237CC0077E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5DDB6331CB1CF40EBD86EDE /* Pods-PageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.debug.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D66365A7D414DF44965D25 /* Pods-PageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.release.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585D9307FD42A7172FD0E2EF /* Pods_PageEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21BC86C451A3AF1A6CB91A36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B207A574223239E4006C6BDA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B207A576223239F0006C6BDA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B207A57822323A12006C6BDA /* AEArticle.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B207A57722323A04006C6BDA /* CommonLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonLib;
+			sourceTree = "<group>";
+		};
+		B207A57C22323DA5006C6BDA /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */,
+				B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		B207A58122324C46006C6BDA /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				B207A58222324C57006C6BDA /* AEEditorViewController.swift */,
+				B207A58422324C78006C6BDA /* AEEditorViewModel.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		B28D2A66223237CC0077E6CD = {
 			isa = PBXGroup;
 			children = (
 				B28D2A71223237CC0077E6CD /* PageEditor */,
 				B28D2A70223237CC0077E6CD /* Products */,
+				D86D4EAD65914FA6AED03899 /* Pods */,
+				21BC86C451A3AF1A6CB91A36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +122,10 @@
 		B28D2A71223237CC0077E6CD /* PageEditor */ = {
 			isa = PBXGroup;
 			children = (
+				B207A57722323A04006C6BDA /* CommonLib */,
+				B207A576223239F0006C6BDA /* Core */,
+				B207A574223239E4006C6BDA /* Manager */,
+				B28D2A842232397F0077E6CD /* View-ViewModel */,
 				B28D2A72223237CC0077E6CD /* AppDelegate.swift */,
 				B28D2A74223237CC0077E6CD /* ViewController.swift */,
 				B28D2A76223237CC0077E6CD /* Main.storyboard */,
@@ -64,6 +136,24 @@
 			path = PageEditor;
 			sourceTree = "<group>";
 		};
+		B28D2A842232397F0077E6CD /* View-ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B207A58122324C46006C6BDA /* Editor */,
+				B207A57C22323DA5006C6BDA /* Master */,
+			);
+			path = "View-ViewModel";
+			sourceTree = "<group>";
+		};
+		D86D4EAD65914FA6AED03899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5DDB6331CB1CF40EBD86EDE /* Pods-PageEditor.debug.xcconfig */,
+				F6D66365A7D414DF44965D25 /* Pods-PageEditor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B28D2A81223237CC0077E6CD /* Build configuration list for PBXNativeTarget "PageEditor" */;
 			buildPhases = (
+				28AE1A0770E4DF33FB78576D /* [CP] Check Pods Manifest.lock */,
 				B28D2A6B223237CC0077E6CD /* Sources */,
 				B28D2A6C223237CC0077E6CD /* Frameworks */,
 				B28D2A6D223237CC0077E6CD /* Resources */,
+				DFEC3CDA013855E4C31E79B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +222,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28AE1A0770E4DF33FB78576D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PageEditor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFEC3CDA013855E4C31E79B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PageEditor/Pods-PageEditor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/PySwiftyRegex/PySwiftyRegex.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PySwiftyRegex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PageEditor/Pods-PageEditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B28D2A6B223237CC0077E6CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */,
 				B28D2A75223237CC0077E6CD /* ViewController.swift in Sources */,
+				B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */,
+				B207A58522324C78006C6BDA /* AEEditorViewModel.swift in Sources */,
+				B207A57B22323A4E006C6BDA /* AEFetchAPI.swift in Sources */,
+				B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */,
 				B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */,
+				B207A57922323A12006C6BDA /* AEArticle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +437,7 @@
 		};
 		B28D2A82223237CC0077E6CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5DDB6331CB1CF40EBD86EDE /* Pods-PageEditor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +456,7 @@
 		};
 		B28D2A83223237CC0077E6CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D66365A7D414DF44965D25 /* Pods-PageEditor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
