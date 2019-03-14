@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import WebKit
 
 class AEEditorViewController: UIViewController {
+    @IBOutlet weak var webView: WKWebView!
+    
+    let viewModel = AEEditorViewModel()
+    
     override func viewDidLoad() {
-        
+        viewModel.viewDidLoad(self)
+        //self.view = WKWebView(frame: self.view.frame, configuration: .init())
+    }
+}
+
+extension AEEditorViewController: AEEditorViewModelBinder{
+    func setHtml(with html: String) {
+        self.webView.loadHTMLString(html, baseURL: nil)
     }
 }

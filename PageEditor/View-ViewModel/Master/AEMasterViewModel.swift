@@ -27,15 +27,12 @@ class AEMasterViewModel {
     
     // MARK: - AEMasterViewModel API
     
-    // MARK: - Common
     /// View側のviewDidLoadから呼び出してください。
     func viewDidLoad<Binder: AEMasterViewModelBinder>(_ binder:Binder){
         self.binder = binder
         
         AEFetchAPI.default.startFetching()
     }
-    
-    // MARK: - View Showing Methods
     
     /// TableViewに表示するセル数を返します。
     func cellCount() -> Int{
@@ -49,7 +46,11 @@ class AEMasterViewModel {
         return AEMasterViewArticleCellData(title: article.title, subTitle: article.createdDate)
     }
     
-    // MARK: - View Editing Methods
+    /// セルが選択された時に呼び出してください。
+    func didSelectRow(at index:Int){
+        let article = self._articles[index]
+        AEEditorManager.default.setCurrentEditingArticle(article)
+    }
     
     /// 引数`index`で指定した行の記事を削除します。 (サーバーから)
     func removeArticle(at index:Int){

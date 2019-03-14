@@ -31,6 +31,10 @@ class AEMasterViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath.row)
+    }
 }
 
 extension AEMasterViewController: AEMasterViewModelBinder{
