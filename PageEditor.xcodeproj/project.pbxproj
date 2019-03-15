@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		585D9307FD42A7172FD0E2EF /* Pods_PageEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */; };
 		B207A57922323A12006C6BDA /* AEArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57822323A12006C6BDA /* AEArticle.swift */; };
-		B207A57B22323A4E006C6BDA /* AEFetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */; };
+		B207A57B22323A4E006C6BDA /* AENakamichiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57A22323A4E006C6BDA /* AENakamichiAPI.swift */; };
 		B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */; };
 		B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */; };
 		B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58222324C57006C6BDA /* AEEditorViewController.swift */; };
@@ -26,11 +26,25 @@
 		B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A76223237CC0077E6CD /* Main.storyboard */; };
 		B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A79223237CC0077E6CD /* Assets.xcassets */; };
 		B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A7B223237CC0077E6CD /* LaunchScreen.storyboard */; };
+		B2EE6C7F223A99C000D260EB /* AEArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */; };
+		B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */; };
+		B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */; };
+		B2EE6C8C223B4D6800D260EB /* PageEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2EE6C8E223B4D6800D260EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B28D2A67223237CC0077E6CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B28D2A6E223237CC0077E6CD;
+			remoteInfo = PageEditor;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B207A57822323A12006C6BDA /* AEArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticle.swift; sourceTree = "<group>"; };
-		B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEFetchAPI.swift; sourceTree = "<group>"; };
+		B207A57A22323A4E006C6BDA /* AENakamichiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AENakamichiAPI.swift; sourceTree = "<group>"; };
 		B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewController.swift; sourceTree = "<group>"; };
 		B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewModel.swift; sourceTree = "<group>"; };
 		B207A58222324C57006C6BDA /* AEEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,12 @@
 		B28D2A79223237CC0077E6CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28D2A7C223237CC0077E6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28D2A7E223237CC0077E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticleConverter.swift; sourceTree = "<group>"; };
+		B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditableArticle.swift; sourceTree = "<group>"; };
+		B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticleNodes.swift; sourceTree = "<group>"; };
+		B2EE6C89223B4D6800D260EB /* PageEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageEditorTests.swift; sourceTree = "<group>"; };
+		B2EE6C8D223B4D6800D260EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DDB6331CB1CF40EBD86EDE /* Pods-PageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.debug.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D66365A7D414DF44965D25 /* Pods-PageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.release.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +80,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				585D9307FD42A7172FD0E2EF /* Pods_PageEditor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EE6C86223B4D6800D260EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +104,8 @@
 		B207A574223239E4006C6BDA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B207A57A22323A4E006C6BDA /* AEFetchAPI.swift */,
+				B2EE6C84223A9A3500D260EB /* AEEditable */,
+				B207A57A22323A4E006C6BDA /* AENakamichiAPI.swift */,
 				B207A586223263E7006C6BDA /* AEEditorManager.swift */,
 			);
 			path = Manager;
@@ -135,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B28D2A71223237CC0077E6CD /* PageEditor */,
+				B2EE6C8A223B4D6800D260EB /* PageEditorTests */,
 				B28D2A70223237CC0077E6CD /* Products */,
 				D86D4EAD65914FA6AED03899 /* Pods */,
 				21BC86C451A3AF1A6CB91A36 /* Frameworks */,
@@ -145,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				B28D2A6F223237CC0077E6CD /* PageEditor.app */,
+				B2EE6C89223B4D6800D260EB /* PageEditorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +202,25 @@
 				B207A57C22323DA5006C6BDA /* Master */,
 			);
 			path = "View-ViewModel";
+			sourceTree = "<group>";
+		};
+		B2EE6C84223A9A3500D260EB /* AEEditable */ = {
+			isa = PBXGroup;
+			children = (
+				B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */,
+				B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */,
+				B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */,
+			);
+			path = AEEditable;
+			sourceTree = "<group>";
+		};
+		B2EE6C8A223B4D6800D260EB /* PageEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */,
+				B2EE6C8D223B4D6800D260EB /* Info.plist */,
+			);
+			path = PageEditorTests;
 			sourceTree = "<group>";
 		};
 		D86D4EAD65914FA6AED03899 /* Pods */ = {
@@ -205,6 +254,24 @@
 			productReference = B28D2A6F223237CC0077E6CD /* PageEditor.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B2EE6C88223B4D6800D260EB /* PageEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EE6C90223B4D6800D260EB /* Build configuration list for PBXNativeTarget "PageEditorTests" */;
+			buildPhases = (
+				B2EE6C85223B4D6800D260EB /* Sources */,
+				B2EE6C86223B4D6800D260EB /* Frameworks */,
+				B2EE6C87223B4D6800D260EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2EE6C8F223B4D6800D260EB /* PBXTargetDependency */,
+			);
+			name = PageEditorTests;
+			productName = PageEditorTests;
+			productReference = B2EE6C89223B4D6800D260EB /* PageEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +284,10 @@
 				TargetAttributes = {
 					B28D2A6E223237CC0077E6CD = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					B2EE6C88223B4D6800D260EB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B28D2A6E223237CC0077E6CD;
 					};
 				};
 			};
@@ -234,6 +305,7 @@
 			projectRoot = "";
 			targets = (
 				B28D2A6E223237CC0077E6CD /* PageEditor */,
+				B2EE6C88223B4D6800D260EB /* PageEditorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +318,13 @@
 				B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */,
 				B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */,
 				B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EE6C87223B4D6800D260EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +363,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PageEditor/Pods-PageEditor-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PySwiftyRegex/PySwiftyRegex.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -296,6 +376,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ji.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PySwiftyRegex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -317,15 +398,18 @@
 			files = (
 				B22246792232AC8400DB64A4 /* RMStorage.swift in Sources */,
 				B222468A2232B53F00DB64A4 /* Ex+CoreGraphics.swift in Sources */,
+				B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */,
 				B22246892232B53F00DB64A4 /* Ex+UIColor.swift in Sources */,
 				B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */,
 				B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */,
 				B207A58522324C78006C6BDA /* AEEditorViewModel.swift in Sources */,
 				B22246842232B53F00DB64A4 /* Ex+UIImage.swift in Sources */,
-				B207A57B22323A4E006C6BDA /* AEFetchAPI.swift in Sources */,
+				B207A57B22323A4E006C6BDA /* AENakamichiAPI.swift in Sources */,
 				B22246882232B53F00DB64A4 /* Ex+UIKit.swift in Sources */,
+				B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */,
 				B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */,
 				B22246872232B53F00DB64A4 /* Ex+Foundation.swift in Sources */,
+				B2EE6C7F223A99C000D260EB /* AEArticleConverter.swift in Sources */,
 				B22246852232B53F00DB64A4 /* Ex+Swift.swift in Sources */,
 				B207A587223263E7006C6BDA /* AEEditorManager.swift in Sources */,
 				B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */,
@@ -333,7 +417,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2EE6C85223B4D6800D260EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EE6C8C223B4D6800D260EB /* PageEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2EE6C8F223B4D6800D260EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B28D2A6E223237CC0077E6CD /* PageEditor */;
+			targetProxy = B2EE6C8E223B4D6800D260EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B28D2A76223237CC0077E6CD /* Main.storyboard */ = {
@@ -509,6 +609,46 @@
 			};
 			name = Release;
 		};
+		B2EE6C91223B4D6800D260EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y475J6372H;
+				INFOPLIST_FILE = PageEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yuki.PageEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageEditor.app/PageEditor";
+			};
+			name = Debug;
+		};
+		B2EE6C92223B4D6800D260EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y475J6372H;
+				INFOPLIST_FILE = PageEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yuki.PageEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageEditor.app/PageEditor";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -526,6 +666,15 @@
 			buildConfigurations = (
 				B28D2A82223237CC0077E6CD /* Debug */,
 				B28D2A83223237CC0077E6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2EE6C90223B4D6800D260EB /* Build configuration list for PBXNativeTarget "PageEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EE6C91223B4D6800D260EB /* Debug */,
+				B2EE6C92223B4D6800D260EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

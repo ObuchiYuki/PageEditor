@@ -10,5 +10,6 @@ target 'PageEditor' do
 	pod "PySwiftyRegex"
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'Ji'
 
 end

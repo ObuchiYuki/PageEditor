@@ -31,7 +31,9 @@ class AEMasterViewModel {
     func viewDidLoad<Binder: AEMasterViewModelBinder>(_ binder:Binder){
         self.binder = binder
         
-        AEFetchAPI.default.startFetching()
+        AENakamichiAPI.default.fetch{articles in
+            self._didFetchArticles(articles)
+        }
     }
     
     /// TableViewに表示するセル数を返します。
@@ -65,13 +67,6 @@ class AEMasterViewModel {
     private func _didFetchArticles(_ articles:[AEArticle]){
         self._articles = articles
         binder?.reloadAllData()
-    }
-    
-    init() {
-        NotificationCenter.default.addObserver(forName: .AEFetchAPIDidFetchData, object: nil, queue: .main){[weak self] notice in
-            guard let articles = notice.object as? [AEArticle] else {return}
-            self?._didFetchArticles(articles)
-        }
     }
 }
 
