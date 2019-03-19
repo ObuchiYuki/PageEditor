@@ -6,12 +6,17 @@
 //  Copyright © 2019 yuki. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Alamofire
 
 // MARK: - AEMasterViewModelBinder Definition
 protocol AEMasterViewModelBinder:class {
     func reloadAllData()
     func reloadData(at indexes:[Int])
+    func removeItem(at index:Int)
+    func changeEditMode(on: Bool)
+    func showAlert(with message:String)
+    func endRefreshing()
 }
 
 // MARK: - AEMasterViewModel Class Definition
@@ -24,6 +29,7 @@ class AEMasterViewModel {
     
     // MARK: - AEMasterViewModel Private Properties
     private var _articles = [AEArticle]()
+    private var _articleImageDataBuffer = [Int: Data]()
     
     // MARK: - AEMasterViewModel API
     
@@ -31,9 +37,34 @@ class AEMasterViewModel {
     func viewDidLoad<Binder: AEMasterViewModelBinder>(_ binder:Binder){
         self.binder = binder
         
+        reloadArticles()
+    }
+    
+    func didEditModeButtonPush(){
+        binder?.changeEditMode(on: true)
+    }
+    
+    func reloadArticles(){
         AENakamichiAPI.default.fetch{articles in
             self._didFetchArticles(articles)
         }
+    }
+    
+    func createNewArticle(for title:String){
+        let newArticle = AEArticle(uuid: "", thumbUrl: "", title: title, createdDate: _createCurrentDateString(), content: "")
+        self._articles.insert(newArticle, at: 0)
+        
+        binder?.reloadAllData()
+        
+        AENakamichiAPI.default.add(newArticle) {}
+    }
+    
+    func removeArticle(at index:Int){
+        let removedArticle = self._articles.remove(at: index)
+        binder?.removeItem(at: index)
+        binder?.showAlert(with: "記事「\(removedArticle.title)」を削除しました。")
+        
+        AENakamichiAPI.default.remove(at: _reverceIndex(from: index)) {}
     }
     
     /// TableViewに表示するセル数を返します。
@@ -44,8 +75,9 @@ class AEMasterViewModel {
     /// TableViewに表示するセルのデータを返します。
     func cellData(for index:Int) -> AEMasterViewArticleCellData{
         let article = self._articles[index]
+        let imageData = _articleImageDataBuffer[index]
         
-        return AEMasterViewArticleCellData(title: article.title, subTitle: article.createdDate)
+        return AEMasterViewArticleCellData(title: article.title, subTitle: article.createdDate, imageData: imageData)
     }
     
     /// セルが選択された時に呼び出してください。
@@ -54,25 +86,41 @@ class AEMasterViewModel {
         AEEditorManager.default.setCurrentEditingArticle(article)
     }
     
-    /// 引数`index`で指定した行の記事を削除します。 (サーバーから)
-    func removeArticle(at index:Int){
-        
+    private func _startImageLoading(){
+        for (i, article) in _articles.enumerated(){
+            
+            Alamofire.request(article.thumbUrl).response{res in
+                guard let data = res.data else {return}
+                
+                self._articleImageDataBuffer[i] = data
+                self.binder?.reloadData(at: [i])
+            }
+        }
     }
-    
-    /// 新たな記事を追加します。(サーバーに)
-    func addNewArticle(){
+    private func _createCurrentDateString() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy'年'MM'月'dd'日'"
         
+        return formatter.string(from: Date())
+    }
+    private func _reverceIndex(from index:Int) -> Int{
+        return _articles.count - index
     }
     
     private func _didFetchArticles(_ articles:[AEArticle]){
-        self._articles = articles
+        self._articles = articles.reversed()
+        
         binder?.reloadAllData()
+        
+        self._startImageLoading()
     }
 }
 
 struct AEMasterViewArticleCellData {
     let title:String
     let subTitle:String
+    
+    let imageData:Data?
 }
 
 

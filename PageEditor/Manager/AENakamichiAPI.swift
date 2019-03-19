@@ -35,7 +35,7 @@ class AENakamichiAPI {
     /// 記事を削除します。
     /// 完了後 `completion`を呼びます。
     func remove(at index:Int, _ completion: @escaping () -> Void ){
-        _postRequest(form: ["method": "remove"]){_ in
+        _postRequest(form: ["method": "remove", "index": String(index)]){_ in
             completion()
         }
     }
@@ -60,6 +60,7 @@ class AENakamichiAPI {
     func edit(_ article:AEArticle, at index:Int, _ completion: @escaping ()->Void){
         let form = [
             "method": "edit",
+            "index": String(index),
             "title": article.title,
             "thumb_url": article.thumbUrl,
             "content": article.content,

@@ -22,7 +22,12 @@ class AEEditorManager {
         _editingArticle = article
         NotificationCenter.default.post(name: .AEEditorManagerDidSetEditingConfig, object: article)
     }
-    func getCurrentEditingArticle() -> AEArticle?{
+    
+    func getCurrentEditableArticle() -> AEEditableArticle? {
+        return _editingArticle.map{AEEditableArticle(article: $0)}
+    }
+    
+    func getCurrentArticle() -> AEArticle? {
         return _editingArticle
     }
 }

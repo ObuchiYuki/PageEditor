@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AEEditableArticle {
+struct AEEditableArticle {
     var title:String
     var createdDate:Date
     var nodes:[AEArticleNode]
@@ -17,5 +17,11 @@ class AEEditableArticle {
         self.title = title
         self.createdDate = createdDate
         self.nodes = nodes
+    }
+    
+    init(article:AEArticle) {
+        let (title, date, nodes) = _AEArticleConverter.default.parse(article)
+        
+        self.init(title: title, createdDate: date, nodes: nodes)
     }
 }

@@ -12,8 +12,8 @@
 		B207A57B22323A4E006C6BDA /* AENakamichiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57A22323A4E006C6BDA /* AENakamichiAPI.swift */; };
 		B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */; };
 		B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */; };
-		B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58222324C57006C6BDA /* AEEditorViewController.swift */; };
-		B207A58522324C78006C6BDA /* AEEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58422324C78006C6BDA /* AEEditorViewModel.swift */; };
+		B207A58322324C57006C6BDA /* AEPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58222324C57006C6BDA /* AEPreviewViewController.swift */; };
+		B207A58522324C78006C6BDA /* AEPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A58422324C78006C6BDA /* AEPreviewViewModel.swift */; };
 		B207A587223263E7006C6BDA /* AEEditorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207A586223263E7006C6BDA /* AEEditorManager.swift */; };
 		B22246792232AC8400DB64A4 /* RMStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246782232AC8400DB64A4 /* RMStorage.swift */; };
 		B22246842232B53F00DB64A4 /* Ex+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B222467D2232B53F00DB64A4 /* Ex+UIImage.swift */; };
@@ -22,11 +22,16 @@
 		B22246882232B53F00DB64A4 /* Ex+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246812232B53F00DB64A4 /* Ex+UIKit.swift */; };
 		B22246892232B53F00DB64A4 /* Ex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246822232B53F00DB64A4 /* Ex+UIColor.swift */; };
 		B222468A2232B53F00DB64A4 /* Ex+CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246832232B53F00DB64A4 /* Ex+CoreGraphics.swift */; };
+		B27AFC78223F5A3E00DE850A /* preview_html_template.tpl in Resources */ = {isa = PBXBuildFile; fileRef = B27AFC77223F5A3E00DE850A /* preview_html_template.tpl */; };
+		B27AFC7B223F5DBD00DE850A /* AEEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */; };
+		B27AFC7D223FE94300DE850A /* AEMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27AFC7C223FE94200DE850A /* AEMasterTableViewCell.swift */; };
+		B27AFC7F223FE96800DE850A /* AEMasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27AFC7E223FE96800DE850A /* AEMasterTableViewCell.xib */; };
+		B27AFC81223FECEE00DE850A /* AEEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27AFC80223FECEE00DE850A /* AEEditorViewModel.swift */; };
 		B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D2A72223237CC0077E6CD /* AppDelegate.swift */; };
 		B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A76223237CC0077E6CD /* Main.storyboard */; };
 		B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A79223237CC0077E6CD /* Assets.xcassets */; };
 		B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A7B223237CC0077E6CD /* LaunchScreen.storyboard */; };
-		B2EE6C7F223A99C000D260EB /* AEArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */; };
+		B2EE6C7F223A99C000D260EB /* _AEArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */; };
 		B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */; };
 		B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */; };
 		B2EE6C8C223B4D6800D260EB /* PageEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */; };
@@ -47,8 +52,8 @@
 		B207A57A22323A4E006C6BDA /* AENakamichiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AENakamichiAPI.swift; sourceTree = "<group>"; };
 		B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewController.swift; sourceTree = "<group>"; };
 		B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterViewModel.swift; sourceTree = "<group>"; };
-		B207A58222324C57006C6BDA /* AEEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewController.swift; sourceTree = "<group>"; };
-		B207A58422324C78006C6BDA /* AEEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewModel.swift; sourceTree = "<group>"; };
+		B207A58222324C57006C6BDA /* AEPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEPreviewViewController.swift; sourceTree = "<group>"; };
+		B207A58422324C78006C6BDA /* AEPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEPreviewViewModel.swift; sourceTree = "<group>"; };
 		B207A586223263E7006C6BDA /* AEEditorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorManager.swift; sourceTree = "<group>"; };
 		B22246782232AC8400DB64A4 /* RMStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMStorage.swift; sourceTree = "<group>"; };
 		B222467D2232B53F00DB64A4 /* Ex+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIImage.swift"; sourceTree = "<group>"; };
@@ -57,13 +62,18 @@
 		B22246812232B53F00DB64A4 /* Ex+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIKit.swift"; sourceTree = "<group>"; };
 		B22246822232B53F00DB64A4 /* Ex+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIColor.swift"; sourceTree = "<group>"; };
 		B22246832232B53F00DB64A4 /* Ex+CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+CoreGraphics.swift"; sourceTree = "<group>"; };
+		B27AFC77223F5A3E00DE850A /* preview_html_template.tpl */ = {isa = PBXFileReference; lastKnownFileType = text; path = preview_html_template.tpl; sourceTree = "<group>"; };
+		B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewController.swift; sourceTree = "<group>"; };
+		B27AFC7C223FE94200DE850A /* AEMasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterTableViewCell.swift; sourceTree = "<group>"; };
+		B27AFC7E223FE96800DE850A /* AEMasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AEMasterTableViewCell.xib; sourceTree = "<group>"; };
+		B27AFC80223FECEE00DE850A /* AEEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewModel.swift; sourceTree = "<group>"; };
 		B28D2A6F223237CC0077E6CD /* PageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28D2A72223237CC0077E6CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28D2A77223237CC0077E6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28D2A79223237CC0077E6CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28D2A7C223237CC0077E6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28D2A7E223237CC0077E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticleConverter.swift; sourceTree = "<group>"; };
+		B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _AEArticleConverter.swift; sourceTree = "<group>"; };
 		B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditableArticle.swift; sourceTree = "<group>"; };
 		B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticleNodes.swift; sourceTree = "<group>"; };
 		B2EE6C89223B4D6800D260EB /* PageEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,17 +143,19 @@
 			children = (
 				B207A57D22323DBC006C6BDA /* AEMasterViewController.swift */,
 				B207A57F223246B2006C6BDA /* AEMasterViewModel.swift */,
+				B27AFC7C223FE94200DE850A /* AEMasterTableViewCell.swift */,
+				B27AFC7E223FE96800DE850A /* AEMasterTableViewCell.xib */,
 			);
 			path = Master;
 			sourceTree = "<group>";
 		};
-		B207A58122324C46006C6BDA /* Editor */ = {
+		B207A58122324C46006C6BDA /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				B207A58222324C57006C6BDA /* AEEditorViewController.swift */,
-				B207A58422324C78006C6BDA /* AEEditorViewModel.swift */,
+				B207A58222324C57006C6BDA /* AEPreviewViewController.swift */,
+				B207A58422324C78006C6BDA /* AEPreviewViewModel.swift */,
 			);
-			path = Editor;
+			path = Preview;
 			sourceTree = "<group>";
 		};
 		B222467C2232B53F00DB64A4 /* extensions */ = {
@@ -157,6 +169,26 @@
 				B22246832232B53F00DB64A4 /* Ex+CoreGraphics.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		B27AFC76223F5A1700DE850A /* Assetes */ = {
+			isa = PBXGroup;
+			children = (
+				B28D2A79223237CC0077E6CD /* Assets.xcassets */,
+				B28D2A7B223237CC0077E6CD /* LaunchScreen.storyboard */,
+				B28D2A76223237CC0077E6CD /* Main.storyboard */,
+				B27AFC77223F5A3E00DE850A /* preview_html_template.tpl */,
+			);
+			path = Assetes;
+			sourceTree = "<group>";
+		};
+		B27AFC79223F5D9700DE850A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */,
+				B27AFC80223FECEE00DE850A /* AEEditorViewModel.swift */,
+			);
+			path = Editor;
 			sourceTree = "<group>";
 		};
 		B28D2A66223237CC0077E6CD = {
@@ -183,14 +215,12 @@
 			isa = PBXGroup;
 			children = (
 				B28D2A72223237CC0077E6CD /* AppDelegate.swift */,
+				B28D2A7E223237CC0077E6CD /* Info.plist */,
 				B207A57722323A04006C6BDA /* CommonLib */,
 				B207A576223239F0006C6BDA /* Core */,
 				B207A574223239E4006C6BDA /* Manager */,
 				B28D2A842232397F0077E6CD /* View-ViewModel */,
-				B28D2A76223237CC0077E6CD /* Main.storyboard */,
-				B28D2A79223237CC0077E6CD /* Assets.xcassets */,
-				B28D2A7B223237CC0077E6CD /* LaunchScreen.storyboard */,
-				B28D2A7E223237CC0077E6CD /* Info.plist */,
+				B27AFC76223F5A1700DE850A /* Assetes */,
 			);
 			path = PageEditor;
 			sourceTree = "<group>";
@@ -198,7 +228,8 @@
 		B28D2A842232397F0077E6CD /* View-ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B207A58122324C46006C6BDA /* Editor */,
+				B27AFC79223F5D9700DE850A /* Editor */,
+				B207A58122324C46006C6BDA /* Preview */,
 				B207A57C22323DA5006C6BDA /* Master */,
 			);
 			path = "View-ViewModel";
@@ -207,7 +238,7 @@
 		B2EE6C84223A9A3500D260EB /* AEEditable */ = {
 			isa = PBXGroup;
 			children = (
-				B2EE6C7E223A99C000D260EB /* AEArticleConverter.swift */,
+				B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */,
 				B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */,
 				B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */,
 			);
@@ -315,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27AFC78223F5A3E00DE850A /* preview_html_template.tpl in Resources */,
 				B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */,
 				B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */,
+				B27AFC7F223FE96800DE850A /* AEMasterTableViewCell.xib in Resources */,
 				B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,19 +434,22 @@
 				B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */,
 				B22246892232B53F00DB64A4 /* Ex+UIColor.swift in Sources */,
 				B207A580223246B2006C6BDA /* AEMasterViewModel.swift in Sources */,
-				B207A58322324C57006C6BDA /* AEEditorViewController.swift in Sources */,
-				B207A58522324C78006C6BDA /* AEEditorViewModel.swift in Sources */,
+				B207A58322324C57006C6BDA /* AEPreviewViewController.swift in Sources */,
+				B207A58522324C78006C6BDA /* AEPreviewViewModel.swift in Sources */,
+				B27AFC7B223F5DBD00DE850A /* AEEditorViewController.swift in Sources */,
 				B22246842232B53F00DB64A4 /* Ex+UIImage.swift in Sources */,
 				B207A57B22323A4E006C6BDA /* AENakamichiAPI.swift in Sources */,
 				B22246882232B53F00DB64A4 /* Ex+UIKit.swift in Sources */,
 				B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */,
 				B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */,
 				B22246872232B53F00DB64A4 /* Ex+Foundation.swift in Sources */,
-				B2EE6C7F223A99C000D260EB /* AEArticleConverter.swift in Sources */,
+				B2EE6C7F223A99C000D260EB /* _AEArticleConverter.swift in Sources */,
 				B22246852232B53F00DB64A4 /* Ex+Swift.swift in Sources */,
 				B207A587223263E7006C6BDA /* AEEditorManager.swift in Sources */,
 				B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */,
 				B207A57922323A12006C6BDA /* AEArticle.swift in Sources */,
+				B27AFC81223FECEE00DE850A /* AEEditorViewModel.swift in Sources */,
+				B27AFC7D223FE94300DE850A /* AEMasterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

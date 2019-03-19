@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Editor View Controller-->
+        <!--Preview View Controller-->
         <scene sceneID="gM6-3S-Arf">
             <objects>
-                <viewController id="sOn-KY-I60" customClass="AEEditorViewController" customModule="PageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sOn-KY-I60" customClass="AEPreviewViewController" customModule="PageEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMq-73-xv4">
                         <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tkk-9h-ZWE"/>
                                     <barButtonItem title="この記事を編集" id="Etu-L2-bQC">
                                         <connections>
-                                            <segue destination="8CB-LU-clQ" kind="presentation" id="FCG-SV-F0O"/>
+                                            <segue destination="E5f-U0-HRb" kind="presentation" id="4GU-2s-Eaa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -68,27 +68,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="article_cell" textLabel="oeW-bU-pts" detailTextLabel="jlP-sg-ZKj" style="IBUITableViewCellStyleSubtitle" id="a5D-2B-7nd">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="article_cell" textLabel="oeW-bU-pts" detailTextLabel="jlP-sg-ZKj" imageView="oZf-tn-gs1" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="a5D-2B-7nd">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5D-2B-7nd" id="wf5-KY-O6h">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oeW-bU-pts">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="164" y="30" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jlP-sg-ZKj">
-                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                            <rect key="frame" x="164" y="53.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" image="m01" id="oZf-tn-gs1">
+                                            <rect key="frame" x="16" y="0.0" width="133" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -102,68 +106,80 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="記事一覧" largeTitleDisplayMode="never" id="1ZJ-Jt-Xtm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="oKb-4j-4Vq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cwp-9z-S6m"/>
+                        <barButtonItem key="leftBarButtonItem" title="削除" id="oKb-4j-4Vq">
+                            <connections>
+                                <action selector="didEditModeButtonPush:" destination="hhv-AQ-cX0" id="EAF-vE-efL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nm9-Yc-eJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-376"/>
+            <point key="canvasLocation" x="1035.9375" y="-376.5625"/>
         </scene>
         <!--Root View Controller-->
-        <scene sceneID="BeM-5y-jqh">
+        <scene sceneID="cHs-Md-gwO">
             <objects>
-                <tableViewController id="ahm-dy-65B" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HN8-lp-ULW">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="yj0-tv-ZC1" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d5n-oQ-ZoJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V2F-xn-ih6">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IBp-Ym-kaf">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V2F-xn-ih6" id="nl8-68-umG">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IBp-Ym-kaf" id="9t3-xe-bCn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="ahm-dy-65B" id="ntr-uR-RtA"/>
-                            <outlet property="delegate" destination="ahm-dy-65B" id="YoK-Ru-yZj"/>
+                            <outlet property="dataSource" destination="yj0-tv-ZC1" id="MTS-83-bqb"/>
+                            <outlet property="delegate" destination="yj0-tv-ZC1" id="ALz-NB-Z1f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wAF-v9-iFP">
-                        <barButtonItem key="leftBarButtonItem" title="完了" id="rbj-8d-1QJ">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="AKL-jN-6Jg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VMN-KY-UB8">
                             <connections>
-                                <action selector="dismiss" destination="ahm-dy-65B" id="mnE-Pa-6Rx"/>
+                                <action selector="dismiss" destination="yj0-tv-ZC1" id="Oxm-Vt-rrh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mph-m1-phO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nW-Lz-c1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="354"/>
+            <point key="canvasLocation" x="2452" y="25"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="YCE-QV-fbj">
+        <scene sceneID="8MV-HC-56D">
             <objects>
-                <navigationController id="8CB-LU-clQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gdw-g0-4Ob">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                <navigationController id="Xap-6u-oeb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rwu-0d-CZi">
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1yV-m5-tDu">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="ahm-dy-65B" kind="relationship" relationship="rootViewController" id="adD-pS-k9Y"/>
+                        <segue destination="yj0-tv-ZC1" kind="relationship" relationship="rootViewController" id="A5j-xx-9yy"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O38-hO-2Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8m-8c-zSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="354"/>
+            <point key="canvasLocation" x="1723" y="25"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="26i-Ls-mhZ">
+            <objects>
+                <splitViewController id="E5f-U0-HRb" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Xap-6u-oeb" kind="relationship" relationship="masterViewController" id="1qk-YK-AWB"/>
+                        <segue destination="Zpl-RW-NfW" kind="relationship" relationship="detailViewController" id="Ml3-71-ejg"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJq-kt-r9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YyT-A9-8xF">
@@ -197,7 +213,44 @@
             </objects>
             <point key="canvasLocation" x="-421" y="-48"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="s63-Vc-RBR">
+            <objects>
+                <viewController id="Zpl-RW-NfW" customClass="AEPreviewViewController" customModule="PageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNe-9n-ANE">
+                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-bY-h20">
+                                <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P5L-bY-h20" firstAttribute="top" secondItem="lNe-9n-ANE" secondAttribute="top" id="8hA-4x-V4A"/>
+                            <constraint firstItem="P5L-bY-h20" firstAttribute="centerX" secondItem="lNe-9n-ANE" secondAttribute="centerX" id="BIm-cF-BNn"/>
+                            <constraint firstItem="P5L-bY-h20" firstAttribute="leading" secondItem="lNe-9n-ANE" secondAttribute="leading" id="oKV-cr-IfV"/>
+                            <constraint firstItem="P5L-bY-h20" firstAttribute="bottom" secondItem="Hxp-Q6-V0c" secondAttribute="bottom" id="toC-TY-qam"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hxp-Q6-V0c"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="P5L-bY-h20" id="iVh-cj-7Wr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UE1-VZ-Waa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722.65625" y="721.875"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="m01" width="600" height="449"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DFH-XA-CyJ"/>
     </inferredMetricsTieBreakers>
