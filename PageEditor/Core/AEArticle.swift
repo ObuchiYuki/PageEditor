@@ -9,14 +9,29 @@
 import Foundation
 
 /// 記事データを取り回すためのデータクラスです。
-struct AEArticle: Codable{
+class AEArticle: Codable{
     /// UUID常にサーバー側のUUIDと一致しているわけでわありません。
     /// ロジック用ではなくjsonパース用です。
-    let uuid:String
-    let thumbUrl:String
-    let title:String
-    let createdDate:String
-    let content:String
+    var uuid:String
+    var thumbUrl:String
+    var title:String
+    var createdDate:String
+    var content:String
+    
+    func copy(other article:AEArticle){
+        self.uuid = article.uuid
+        self.thumbUrl = article.thumbUrl
+        self.title = article.title
+        self.createdDate = article.createdDate
+        self.content = article.content
+    }
+    init(uuid:String,thumbUrl:String,title:String,createdDate:String,content:String) {
+        self.uuid = uuid
+        self.thumbUrl = thumbUrl
+        self.title = title
+        self.createdDate = createdDate
+        self.content = content
+    }
 }
 
 extension AEArticle: Equatable{

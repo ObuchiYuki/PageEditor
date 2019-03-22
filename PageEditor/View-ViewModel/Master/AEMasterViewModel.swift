@@ -97,12 +97,14 @@ class AEMasterViewModel {
             }
         }
     }
+    
     private func _createCurrentDateString() -> String{
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy'年'MM'月'dd'日'"
         
         return formatter.string(from: Date())
     }
+    
     private func _reverceIndex(from index:Int) -> Int{
         return _articles.count - index
     }

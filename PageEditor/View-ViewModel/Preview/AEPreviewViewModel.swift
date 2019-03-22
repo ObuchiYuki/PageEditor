@@ -48,10 +48,15 @@ class AEPreviewViewModel {
     }
     
     init() {
-        NotificationCenter.default.addObserver(forName: .AEEditorManagerDidSetEditingConfig, object: nil, queue: .main){notice in
+        NotificationCenter.default.addObserver(forName: .AEEditorManagerEditingArticleChanged, object: nil, queue: .main){[weak self] notice in
             guard let article = notice.object as? AEArticle else {return}
             
-            self._didUpdateArticle(article)
+            self?._didUpdateArticle(article)
+        }
+        NotificationCenter.default.addObserver(forName: .AEEditorManagerArticleEdited){[weak self] object in
+            guard let article = object as? AEArticle else {return}
+            
+            self?._didUpdateArticle(article)
         }
     }
 }

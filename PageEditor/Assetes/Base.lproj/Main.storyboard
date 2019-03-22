@@ -117,17 +117,17 @@
             </objects>
             <point key="canvasLocation" x="1035.9375" y="-376.5625"/>
         </scene>
-        <!--Root View Controller-->
+        <!--記事-->
         <scene sceneID="cHs-Md-gwO">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="yj0-tv-ZC1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d5n-oQ-ZoJ">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="yj0-tv-ZC1" customClass="AEEditorViewController" customModule="PageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="d5n-oQ-ZoJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IBp-Ym-kaf">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IBp-Ym-kaf" id="9t3-xe-bCn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -140,7 +140,7 @@
                             <outlet property="delegate" destination="yj0-tv-ZC1" id="ALz-NB-Z1f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="AKL-jN-6Jg">
+                    <navigationItem key="navigationItem" title="記事" id="AKL-jN-6Jg">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="VMN-KY-UB8">
                             <connections>
                                 <action selector="dismiss" destination="yj0-tv-ZC1" id="Oxm-Vt-rrh"/>

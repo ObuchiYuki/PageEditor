@@ -11,16 +11,27 @@ import Foundation
 /*
  Editorの管理クラスです。
  ----通知----
- - AEEditorManagerDidSetEditingConfig (object: AEArticle)
+ - AEEditorManagerEditingArticleChanged (object: AEArticle)
  */
 class AEEditorManager {
     static let `default` = AEEditorManager()
     
     private var _editingArticle:AEArticle? = nil
     
+    func updataArticle(to article:AEEditableArticle){
+        let newArticle = article.uneditableArticle
+        if _editingArticle == nil{
+            _editingArticle = newArticle
+        }else{
+            _editingArticle?.copy(other: newArticle)
+        }
+        
+        NotificationCenter.default.post(name: .AEEditorManagerArticleEdited, object: _editingArticle)
+    }
     func setCurrentEditingArticle(_ article:AEArticle){
         _editingArticle = article
-        NotificationCenter.default.post(name: .AEEditorManagerDidSetEditingConfig, object: article)
+        print(article.title)
+        NotificationCenter.default.post(name: .AEEditorManagerEditingArticleChanged, object: article)
     }
     
     func getCurrentEditableArticle() -> AEEditableArticle? {
@@ -33,5 +44,6 @@ class AEEditorManager {
 }
 
 extension Notification.Name{
-    static let AEEditorManagerDidSetEditingConfig = Notification.Name("_AEEditorManagerDidSetEditingConfig")
+    static let AEEditorManagerEditingArticleChanged = Notification.Name("_AEEditorManagerEditingArticleChanged")
+    static let AEEditorManagerArticleEdited = Notification.Name("_AEEditorManagerArticleEdited")
 }

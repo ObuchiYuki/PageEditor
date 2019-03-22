@@ -28,6 +28,10 @@ extension String{
     private var ns:NSString{
         return NSString(string: self)
     }
+    func removed(by charset:CharacterSet) -> String{
+        return self.components(separatedBy: charset).filter {!$0.isEmpty}.joined(separator: "")
+    }
+    
     /// String converted to URL.
     var url:URL?{
         return URL(string: self)
@@ -43,8 +47,8 @@ extension String{
 // MARK: - A NotificationCenter Extesion
 extension NotificationCenter{
     /// For Easy Use.
-    @discardableResult func addObserver(forName name: NSNotification.Name?, using block: @escaping ()->Void) -> NSObjectProtocol{
-        return self.addObserver(forName: name, object: nil, queue: nil, using: {_ in block()})
+    @discardableResult func addObserver(forName name: NSNotification.Name?, using block: @escaping (Any?)->Void) -> NSObjectProtocol{
+        return self.addObserver(forName: name, object: nil, queue: nil, using: {notice in block(notice.object)})
     }
 }
 

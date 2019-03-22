@@ -22,6 +22,15 @@
 		B22246882232B53F00DB64A4 /* Ex+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246812232B53F00DB64A4 /* Ex+UIKit.swift */; };
 		B22246892232B53F00DB64A4 /* Ex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246822232B53F00DB64A4 /* Ex+UIColor.swift */; };
 		B222468A2232B53F00DB64A4 /* Ex+CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22246832232B53F00DB64A4 /* Ex+CoreGraphics.swift */; };
+		B264ABBC22412DD900CCE597 /* AEEditorNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264ABBA22412DD900CCE597 /* AEEditorNameCell.swift */; };
+		B264ABBD22412DD900CCE597 /* AEEditorNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B264ABBB22412DD900CCE597 /* AEEditorNameCell.xib */; };
+		B264ABBF22412FAB00CCE597 /* AEEditorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264ABBE22412FAB00CCE597 /* AEEditorCell.swift */; };
+		B26C1B042240CBA600CCF173 /* AEEditorParagraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26C1B032240CBA600CCF173 /* AEEditorParagraphCell.xib */; };
+		B26C1B062240CBAF00CCF173 /* AEEditorParagraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C1B052240CBAF00CCF173 /* AEEditorParagraphCell.swift */; };
+		B26C1B0A2240E86700CCF173 /* AEEditorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C1B082240E86700CCF173 /* AEEditorImageCell.swift */; };
+		B26C1B0B2240E86700CCF173 /* AEEditorImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26C1B092240E86700CCF173 /* AEEditorImageCell.xib */; };
+		B26C1B0E2240ED0D00CCF173 /* AEEditorHeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C1B0C2240ED0D00CCF173 /* AEEditorHeadlineCell.swift */; };
+		B26C1B0F2240ED0D00CCF173 /* AEEditorHeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26C1B0D2240ED0D00CCF173 /* AEEditorHeadlineCell.xib */; };
 		B27AFC78223F5A3E00DE850A /* preview_html_template.tpl in Resources */ = {isa = PBXBuildFile; fileRef = B27AFC77223F5A3E00DE850A /* preview_html_template.tpl */; };
 		B27AFC7B223F5DBD00DE850A /* AEEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */; };
 		B27AFC7D223FE94300DE850A /* AEMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27AFC7C223FE94200DE850A /* AEMasterTableViewCell.swift */; };
@@ -62,6 +71,15 @@
 		B22246812232B53F00DB64A4 /* Ex+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIKit.swift"; sourceTree = "<group>"; };
 		B22246822232B53F00DB64A4 /* Ex+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIColor.swift"; sourceTree = "<group>"; };
 		B22246832232B53F00DB64A4 /* Ex+CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+CoreGraphics.swift"; sourceTree = "<group>"; };
+		B264ABBA22412DD900CCE597 /* AEEditorNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorNameCell.swift; sourceTree = "<group>"; };
+		B264ABBB22412DD900CCE597 /* AEEditorNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AEEditorNameCell.xib; sourceTree = "<group>"; };
+		B264ABBE22412FAB00CCE597 /* AEEditorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorCell.swift; sourceTree = "<group>"; };
+		B26C1B032240CBA600CCF173 /* AEEditorParagraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AEEditorParagraphCell.xib; sourceTree = "<group>"; };
+		B26C1B052240CBAF00CCF173 /* AEEditorParagraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorParagraphCell.swift; sourceTree = "<group>"; };
+		B26C1B082240E86700CCF173 /* AEEditorImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorImageCell.swift; sourceTree = "<group>"; };
+		B26C1B092240E86700CCF173 /* AEEditorImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AEEditorImageCell.xib; sourceTree = "<group>"; };
+		B26C1B0C2240ED0D00CCF173 /* AEEditorHeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorHeadlineCell.swift; sourceTree = "<group>"; };
+		B26C1B0D2240ED0D00CCF173 /* AEEditorHeadlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AEEditorHeadlineCell.xib; sourceTree = "<group>"; };
 		B27AFC77223F5A3E00DE850A /* preview_html_template.tpl */ = {isa = PBXFileReference; lastKnownFileType = text; path = preview_html_template.tpl; sourceTree = "<group>"; };
 		B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditorViewController.swift; sourceTree = "<group>"; };
 		B27AFC7C223FE94200DE850A /* AEMasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEMasterTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +189,22 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		B26C1B072240CEB800CCF173 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B26C1B032240CBA600CCF173 /* AEEditorParagraphCell.xib */,
+				B26C1B052240CBAF00CCF173 /* AEEditorParagraphCell.swift */,
+				B26C1B092240E86700CCF173 /* AEEditorImageCell.xib */,
+				B26C1B082240E86700CCF173 /* AEEditorImageCell.swift */,
+				B26C1B0D2240ED0D00CCF173 /* AEEditorHeadlineCell.xib */,
+				B26C1B0C2240ED0D00CCF173 /* AEEditorHeadlineCell.swift */,
+				B264ABBB22412DD900CCE597 /* AEEditorNameCell.xib */,
+				B264ABBA22412DD900CCE597 /* AEEditorNameCell.swift */,
+				B264ABBE22412FAB00CCE597 /* AEEditorCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B27AFC76223F5A1700DE850A /* Assetes */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +219,7 @@
 		B27AFC79223F5D9700DE850A /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				B26C1B072240CEB800CCF173 /* Cells */,
 				B27AFC7A223F5DBD00DE850A /* AEEditorViewController.swift */,
 				B27AFC80223FECEE00DE850A /* AEEditorViewModel.swift */,
 			);
@@ -346,11 +381,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26C1B0F2240ED0D00CCF173 /* AEEditorHeadlineCell.xib in Resources */,
+				B26C1B042240CBA600CCF173 /* AEEditorParagraphCell.xib in Resources */,
+				B264ABBD22412DD900CCE597 /* AEEditorNameCell.xib in Resources */,
 				B27AFC78223F5A3E00DE850A /* preview_html_template.tpl in Resources */,
 				B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */,
 				B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */,
 				B27AFC7F223FE96800DE850A /* AEMasterTableViewCell.xib in Resources */,
 				B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */,
+				B26C1B0B2240E86700CCF173 /* AEEditorImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B264ABBF22412FAB00CCE597 /* AEEditorCell.swift in Sources */,
 				B22246792232AC8400DB64A4 /* RMStorage.swift in Sources */,
 				B222468A2232B53F00DB64A4 /* Ex+CoreGraphics.swift in Sources */,
 				B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */,
@@ -441,13 +481,17 @@
 				B207A57B22323A4E006C6BDA /* AENakamichiAPI.swift in Sources */,
 				B22246882232B53F00DB64A4 /* Ex+UIKit.swift in Sources */,
 				B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */,
+				B26C1B0E2240ED0D00CCF173 /* AEEditorHeadlineCell.swift in Sources */,
 				B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */,
+				B26C1B0A2240E86700CCF173 /* AEEditorImageCell.swift in Sources */,
 				B22246872232B53F00DB64A4 /* Ex+Foundation.swift in Sources */,
+				B26C1B062240CBAF00CCF173 /* AEEditorParagraphCell.swift in Sources */,
 				B2EE6C7F223A99C000D260EB /* _AEArticleConverter.swift in Sources */,
 				B22246852232B53F00DB64A4 /* Ex+Swift.swift in Sources */,
 				B207A587223263E7006C6BDA /* AEEditorManager.swift in Sources */,
 				B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */,
 				B207A57922323A12006C6BDA /* AEArticle.swift in Sources */,
+				B264ABBC22412DD900CCE597 /* AEEditorNameCell.swift in Sources */,
 				B27AFC81223FECEE00DE850A /* AEEditorViewModel.swift in Sources */,
 				B27AFC7D223FE94300DE850A /* AEMasterTableViewCell.swift in Sources */,
 			);
