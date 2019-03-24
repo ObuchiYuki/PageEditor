@@ -23,6 +23,12 @@ class AEEditorViewController: UITableViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonDidPush(_:)))
         self.navigationItem.rightBarButtonItem = addButton
     }
+    
+    override func dismiss() {
+        super.dismiss()
+        AEEditorManager.default.uploadCurrentArticle()
+    }
+    
     @objc func addButtonDidPush(_ button:UIBarButtonItem){
         let actionSheet = UIAlertController(title: "要素を追加", message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(title: "段落"){self.viewModel.addItem(for: .paragraph)}
@@ -87,6 +93,17 @@ extension AEEditorParagraphCell{
     
 }
 extension AEEditorViewController: AEEditorViewModelBinder{
+    
+    func showCameraRoll(_ completion: @escaping (UIImage) -> Void) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            let picker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.delegate = self
+            picker.accessibilityElements = [completion]
+            self.present(picker, animated: true, completion: nil)
+        }
+    }
+    
     func reloadCells(at rows: [Int]) {
         self.tableView.reloadRows(at: rows.map{IndexPath(row: $0, section: 0)}, with: .automatic)
     }
@@ -98,5 +115,15 @@ extension AEEditorViewController: AEEditorViewModelBinder{
     }
     func appendCell(at row: Int) {
         self.tableView.insertRows(at: [[0, row]], with: .automatic)
+    }
+}
+
+extension AEEditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        (picker.accessibilityElements![0] as! (UIImage) -> Void)(image)
+        
+        picker.dismiss()
     }
 }

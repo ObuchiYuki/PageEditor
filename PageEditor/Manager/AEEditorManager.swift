@@ -17,20 +17,31 @@ class AEEditorManager {
     static let `default` = AEEditorManager()
     
     private var _editingArticle:AEArticle? = nil
+    private var _editingArticleIndex:Int? = nil
     
-    func updataArticle(to article:AEEditableArticle){
-        let newArticle = article.uneditableArticle
-        if _editingArticle == nil{
-            _editingArticle = newArticle
-        }else{
-            _editingArticle?.copy(other: newArticle)
+    func updataArticle(to article:AEEditableArticle?=nil){
+        if let newArticle = article?.uneditableArticle{
+            if _editingArticle == nil{
+                _editingArticle = newArticle
+            }else{
+                _editingArticle?.copy(other: newArticle)
+            }
         }
         
         NotificationCenter.default.post(name: .AEEditorManagerArticleEdited, object: _editingArticle)
     }
-    func setCurrentEditingArticle(_ article:AEArticle){
+    func uploadCurrentArticle(){
+        guard
+            let editingArticle = _editingArticle,
+            let editingArticleIndex = _editingArticleIndex
+            else {return}
+            
+        AENakamichiAPI.default.edit(editingArticle, at: editingArticleIndex) {}
+    }
+    
+    func setCurrentEditingArticle(_ article:AEArticle, with index:Int){
         _editingArticle = article
-        print(article.title)
+        _editingArticleIndex = index
         NotificationCenter.default.post(name: .AEEditorManagerEditingArticleChanged, object: article)
     }
     
@@ -40,6 +51,10 @@ class AEEditorManager {
     
     func getCurrentArticle() -> AEArticle? {
         return _editingArticle
+    }
+    
+    func getCurrentEditingIndex() -> Int{
+        return self._editingArticleIndex
     }
 }
 

@@ -32,6 +32,18 @@ class AENakamichiAPI {
         }
     }
     
+    func uploadImage(with pngImageData:Data, _ completion: @escaping (String)->Void){
+        let form = [
+            FormData(name: "method", value: "post_image"),
+            FormData(name: "data", data: pngImageData, filename: "POST_IMAGE", mimeType: "image/png")
+        ]
+        self._postRequest(formData: form){data in
+            guard let url = String(bytes: data, encoding: .utf8) else {return}
+            
+            completion(url)
+        }
+    }
+    
     /// 記事を削除します。
     /// 完了後 `completion`を呼びます。
     func remove(at index:Int, _ completion: @escaping () -> Void ){
@@ -66,15 +78,45 @@ class AENakamichiAPI {
             "content": article.content,
             "created_date": article.createdDate
         ]
-        _postRequest(form: form){_ in
+        _postRequest(form: form){data in
             completion()
         }
     }
     
     // MARK: - AENakamichiAPI Private Methods
+    struct FormData{
+        let name:String
+        let data:Data
+        let filename:String?
+        let mimeType:String?
+        
+        init(name:String, value:String){
+            self.init(name: name, data: value.data(using: .utf8)!)
+            
+        }
+        init(name:String, data:Data,filename:String?=nil, mimeType:String?=nil) {
+            self.name = name
+            self.data = data
+            self.filename = filename
+            self.mimeType = mimeType
+        }
+    }
     private func _postRequest(form:[String:String] ,_ completion: @escaping (Data)-> Void){
+        self._postRequest(formData: form.map{key, value in FormData(name: key, value: value)}, completion)
+    }
+    private func _postRequest(formData:[FormData],_ completion: @escaping (Data)-> Void){
         Alamofire.upload(multipartFormData: {multipartFormData in
-            form.forEach{ multipartFormData.append($1.data(using: .utf8)!, withName: $0) }
+            formData.forEach{
+                switch ($0.filename, $0.mimeType){
+                case (nil, nil):
+                    multipartFormData.append($0.data, withName: $0.name)
+                case let (nil, mimeType?):
+                    multipartFormData.append($0.data, withName: $0.name, mimeType:mimeType)
+                case let (filneme?, mimeType?):
+                    multipartFormData.append($0.data, withName: $0.name, fileName: filneme, mimeType: mimeType)
+                default: break
+                }
+            }
             
         }, to: API_SEVER_URL){result in
             switch result{

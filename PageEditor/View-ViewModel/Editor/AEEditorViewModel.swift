@@ -6,11 +6,12 @@
 //  Copyright © 2019 yuki. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreGraphics
 import Alamofire
 
 protocol AEEditorViewModelBinder:class {
+    func showCameraRoll(_ completion:@escaping (UIImage) -> Void)
     func reloadCells(at rows:[Int])
     func reloadAllCells()
     func appendCell(at row:Int)
@@ -116,6 +117,22 @@ class AEEditorViewModel{
             
             self?._didCellDataChanged(with: cell)
         }
+        NotificationCenter.default.addObserver(forName: .AEEditorImageCellChangeButtonPushed, object: nil, queue: .main){[weak self] notice in
+            guard let cell = notice.object as? AEEditorImageCell else {return}
+            
+            self?._didImageCellChageButtonPushed(cell)
+        }
+    }
+    
+    private func _didImageCellChageButtonPushed(_ cell:AEEditorImageCell){
+        binder.showCameraRoll{image in
+            cell.editImage(image)
+            
+            AENakamichiAPI.default.uploadImage(with: image.pngData()!){url in
+                (cell.data as! AEEditorImageCellData).src = url
+                self._didCellDataChanged(with: cell)
+            }
+        }
     }
     
     private func _didCellDataChanged(with cell:AEEditorCell){
@@ -126,6 +143,7 @@ class AEEditorViewModel{
     
         AEEditorManager.default.updataArticle(to: _editingArticle)
     }
+    
     private func _didCellRemoveButtonPush(with cell:AEEditorCell){
         let removeIndex = self._cellDataBuffer.firstIndex(of: cell.data)!
         

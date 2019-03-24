@@ -6,6 +6,9 @@
 //  Copyright © 2019 yuki. All rights reserved.
 //
 
+// TODO: - 画像を追加する機能を作る。
+// TODO: - タイトル、サムネを編集する機能を作る。
+
 import UIKit
 
 @UIApplicationMain
@@ -15,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         return true
     }
 

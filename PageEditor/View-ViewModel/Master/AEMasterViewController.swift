@@ -12,7 +12,7 @@ import UIKit
 class AEMasterViewController: UITableViewController {
     
     // MARK: - ViewModel
-    private let viewModel = AEMasterViewModel()
+    private lazy var viewModel = AEMasterViewModel(self)
     
     // MARK: - AEMasterViewController Override Methods
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class AEMasterViewController: UITableViewController {
         
         self.tableView.register(.masterArticleCell, forCellReuseIdentifier: AEMasterTableViewCell.identifier)
         
-        viewModel.viewDidLoad(self)
+        viewModel.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {

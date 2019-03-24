@@ -22,10 +22,10 @@ protocol AEMasterViewModelBinder:class {
 // MARK: - AEMasterViewModel Class Definition
 
 /// AEMasterViewのViewModel
-class AEMasterViewModel {
+class AEMasterViewModel<Binder:AEMasterViewModelBinder> {
     
     // MARK: - AEMasterViewModel Properties
-    var binder:AEMasterViewModelBinder?
+    var binder:Binder!
     
     // MARK: - AEMasterViewModel Private Properties
     private var _articles = [AEArticle]()
@@ -34,9 +34,7 @@ class AEMasterViewModel {
     // MARK: - AEMasterViewModel API
     
     /// View側のviewDidLoadから呼び出してください。
-    func viewDidLoad<Binder: AEMasterViewModelBinder>(_ binder:Binder){
-        self.binder = binder
-        
+    func viewDidLoad(){
         reloadArticles()
     }
     
@@ -83,9 +81,16 @@ class AEMasterViewModel {
     /// セルが選択された時に呼び出してください。
     func didSelectRow(at index:Int){
         let article = self._articles[index]
-        AEEditorManager.default.setCurrentEditingArticle(article)
+        AEEditorManager.default.setCurrentEditingArticle(article, with: _reverceIndex(from: index)-1)
     }
     
+    
+    init(_ binder:Binder) {
+        self.binder = binder
+        NotificationCenter.default.addObserver(forName: .AEEditorManagerArticleEdited){object in
+            self.binder.reloadData(at: [AEEditorManager.default.getCurrentArticle()])
+        }
+    }
     private func _startImageLoading(){
         for (i, article) in _articles.enumerated(){
             
