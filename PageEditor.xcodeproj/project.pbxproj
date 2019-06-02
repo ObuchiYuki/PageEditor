@@ -42,10 +42,10 @@
 		B28D2A78223237CC0077E6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A76223237CC0077E6CD /* Main.storyboard */; };
 		B28D2A7A223237CC0077E6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A79223237CC0077E6CD /* Assets.xcassets */; };
 		B28D2A7D223237CC0077E6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28D2A7B223237CC0077E6CD /* LaunchScreen.storyboard */; };
-		B2EE6C7F223A99C000D260EB /* _AEArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */; };
 		B2EE6C81223A99D700D260EB /* AEEditableArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */; };
 		B2EE6C83223A99E400D260EB /* AEArticleNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */; };
 		B2EE6C8C223B4D6800D260EB /* PageEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */; };
+		B6426F2F22A40C2F00B7B452 /* _AEArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6426F2E22A40C2F00B7B452 /* _AEArticleConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,12 +95,12 @@
 		B28D2A79223237CC0077E6CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28D2A7C223237CC0077E6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28D2A7E223237CC0077E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _AEArticleConverter.swift; sourceTree = "<group>"; };
 		B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEEditableArticle.swift; sourceTree = "<group>"; };
 		B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEArticleNodes.swift; sourceTree = "<group>"; };
 		B2EE6C89223B4D6800D260EB /* PageEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EE6C8B223B4D6800D260EB /* PageEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageEditorTests.swift; sourceTree = "<group>"; };
 		B2EE6C8D223B4D6800D260EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6426F2E22A40C2F00B7B452 /* _AEArticleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _AEArticleConverter.swift; sourceTree = "<group>"; };
 		E5DDB6331CB1CF40EBD86EDE /* Pods-PageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.debug.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		F29BB9908B78D2473C9F8763 /* Pods_PageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D66365A7D414DF44965D25 /* Pods-PageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageEditor.release.xcconfig"; path = "Target Support Files/Pods-PageEditor/Pods-PageEditor.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 		B2EE6C84223A9A3500D260EB /* AEEditable */ = {
 			isa = PBXGroup;
 			children = (
-				B2EE6C7E223A99C000D260EB /* _AEArticleConverter.swift */,
+				B6426F2E22A40C2F00B7B452 /* _AEArticleConverter.swift */,
 				B2EE6C80223A99D700D260EB /* AEEditableArticle.swift */,
 				B2EE6C82223A99E400D260EB /* AEArticleNodes.swift */,
 			);
@@ -452,8 +452,8 @@
 				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PySwiftyRegex/PySwiftyRegex.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -465,8 +465,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ji.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PySwiftyRegex.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -499,9 +499,9 @@
 				B207A57E22323DBC006C6BDA /* AEMasterViewController.swift in Sources */,
 				B26C1B0A2240E86700CCF173 /* AEEditorImageCell.swift in Sources */,
 				B22246872232B53F00DB64A4 /* Ex+Foundation.swift in Sources */,
+				B6426F2F22A40C2F00B7B452 /* _AEArticleConverter.swift in Sources */,
 				B26C1B062240CBAF00CCF173 /* AEEditorParagraphCell.swift in Sources */,
 				B22B371522474FB7000C41DA /* AEMetadataEditoViewController.swift in Sources */,
-				B2EE6C7F223A99C000D260EB /* _AEArticleConverter.swift in Sources */,
 				B22246852232B53F00DB64A4 /* Ex+Swift.swift in Sources */,
 				B207A587223263E7006C6BDA /* AEEditorManager.swift in Sources */,
 				B28D2A73223237CC0077E6CD /* AppDelegate.swift in Sources */,
@@ -673,13 +673,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y475J6372H;
+				DEVELOPMENT_TEAM = 4NN4TCPLE3;
 				INFOPLIST_FILE = PageEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuki.PageEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = arano.PageEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -692,13 +692,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y475J6372H;
+				DEVELOPMENT_TEAM = 4NN4TCPLE3;
 				INFOPLIST_FILE = PageEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuki.PageEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = arano.PageEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

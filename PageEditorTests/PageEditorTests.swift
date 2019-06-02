@@ -5,7 +5,7 @@
 //  Created by yuki on 2019/03/15.
 //  Copyright © 2019 yuki. All rights reserved.
 //
-
+/*
 import XCTest
 @testable import PageEditor
 
@@ -23,3 +23,4 @@ class PageEditorTests: XCTestCase {
         XCTAssertEqual(rindex, 3)
     }
 }
+*/

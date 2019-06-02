@@ -293,7 +293,7 @@ extension UIImage{
             let blurPadding = (radius+(blurDiffusion ?? 0)) * scale * 2
             blurLayer.frame.size = CGSize(width: imageSize.width+blurPadding, height: imageSize.height+blurPadding)
             blurLayer.frame.origin = CGPoint(
-                x: (blurOffset?.width  ?? 0)-blurPadding/2+padding/2,
+                x: (blurOffset?.width  ?? 0) - blurPadding/2+padding/2,
                 y: (blurOffset?.height ?? 0)-blurPadding/2+padding/2
             )
             

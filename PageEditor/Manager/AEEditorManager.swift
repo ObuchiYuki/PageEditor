@@ -54,7 +54,7 @@ class AEEditorManager {
     }
     
     func getCurrentEditingIndex() -> Int{
-        return self._editingArticleIndex
+        return self._editingArticleIndex ?? 0
     }
 }
 

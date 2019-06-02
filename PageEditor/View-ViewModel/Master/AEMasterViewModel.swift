@@ -88,7 +88,7 @@ class AEMasterViewModel<Binder:AEMasterViewModelBinder> {
     init(_ binder:Binder) {
         self.binder = binder
         NotificationCenter.default.addObserver(forName: .AEEditorManagerArticleEdited){object in
-            self.binder.reloadData(at: [AEEditorManager.default.getCurrentArticle()])
+            self.binder.reloadData(at: [AEEditorManager.default.getCurrentEditingIndex()])
         }
     }
     private func _startImageLoading(){
